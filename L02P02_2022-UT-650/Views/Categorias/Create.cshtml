@@ -1,0 +1,13 @@
+﻿@model L02P02_2022_UT_650.Models.Categoria
+
+<h2>Agregar Nueva Categoría</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Nombre de la Categoría</label>
+        <input type="text" name="Nombre" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+</form>
+
+<a href="@Url.Action("Index", "Categorias")" class="btn btn-secondary">Volver</a>

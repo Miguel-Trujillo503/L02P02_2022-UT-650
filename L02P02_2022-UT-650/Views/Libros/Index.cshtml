@@ -1,0 +1,33 @@
+﻿@model IEnumerable<L02P02_2022_UT_650.Models.Libro>
+
+<div class="container mt-4">
+    <h2 class="text-center">Lista de Libros</h2>
+    <a href="@Url.Action("Create", "Libros")" class="btn btn-primary mb-3">Agregar Libro</a>
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var libro in Model)
+            {
+                <tr>
+                    <td>@libro.Id</td>
+                    <td>@libro.Nombre</td>
+                    <td>@libro.Descripcion</td>
+                    <td>@libro.Precio</td>
+                    <td>@libro.Estado</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="footer">
+    2025-03-04 - Miguel Ernesto Umaña Trujillo
+</div>

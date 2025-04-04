@@ -1,0 +1,25 @@
+﻿@model L02P02_2022_UT_650.Models.Cliente
+
+<h2>Agregar Nuevo Cliente</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input type="text" name="Nombre" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Apellido</label>
+        <input type="text" name="Apellido" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" name="Email" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Dirección</label>
+        <input type="text" name="Direccion" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+</form>
+
+<a href="@Url.Action("Index", "Clientes")" class="btn btn-secondary">Volver</a>

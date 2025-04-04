@@ -1,0 +1,33 @@
+﻿@model IEnumerable<L02P02_2022_UT_650.Models.ComentariosLibros>
+
+<div class="container mt-4">
+    <h2 class="text-center">Lista de Comentarios</h2>
+    <a href="@Url.Action("Create", "ComentariosLibros")" class="btn btn-primary mb-3">Agregar Comentario</a>
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>ID Libro</th>
+                <th>Comentario</th>
+                <th>Usuario</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var comentario in Model)
+            {
+                <tr>
+                    <td>@comentario.Id</td>
+                    <td>@comentario.IdLibro</td>
+                    <td>@comentario.Comentario</td>
+                    <td>@comentario.Usuario</td>
+                    <td>@comentario.FechaCreacion</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="footer">
+    2025-03-04 - Miguel Ernesto Umaña Trujillo
+</div>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<L02P02_2022_UT_650.Models.Categoria>
+
+<div class="container mt-4">
+    <h2 class="text-center">Lista de Categorías</h2>
+    <a href="@Url.Action("Create", "Categorias")" class="btn btn-primary mb-3">Agregar Categoría</a>
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var categoria in Model)
+            {
+                <tr>
+                    <td>@categoria.Id</td>
+                    <td>@categoria.Nombre</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="footer">
+    2025-03-04 - Miguel Ernesto Umaña Trujillo
+</div>

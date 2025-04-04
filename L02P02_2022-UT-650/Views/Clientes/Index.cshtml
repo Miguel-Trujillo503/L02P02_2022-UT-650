@@ -1,0 +1,38 @@
+﻿@model IEnumerable<L02P02_2022_UT_650.Models.Cliente>
+
+<div class="container mt-4">
+    <h2 class="text-center">Lista de Clientes</h2>
+    <a href="@Url.Action("Create", "Clientes")" class="btn btn-primary mb-3">Agregar Cliente</a>
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Dirección</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in Model)
+            {
+                <tr>
+                    <td>@cliente.Id</td>
+                    <td>@cliente.Nombre</td>
+                    <td>@cliente.Apellido</td>
+                    <td>@cliente.Email</td>
+                    <td>@cliente.Direccion</td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Clientes", new { id = cliente.Id })" class="btn btn-warning">Editar</a>
+                        <a href="@Url.Action("Delete", "Clientes", new { id = cliente.Id })" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="footer">
+    2025-03-04 - Miguel Ernesto Umaña Trujillo
+</div>
